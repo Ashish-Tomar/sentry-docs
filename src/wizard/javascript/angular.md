@@ -85,5 +85,4 @@ export class AppModule {}
 
 Additionally, `createErrorHandler` accepts a set of options that allows you to configure its behavior. For more details see `ErrorHandlerOptions` interface in [our repository](https://github.com/getsentry/sentry-javascript/blob/master/packages/angular/src/errorhandler.ts).
 
-
 <!-- TODO-ADD-VERIFICATION-EXAMPLE -->
