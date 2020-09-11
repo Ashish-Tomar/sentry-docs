@@ -20,15 +20,15 @@ $ npm install --save @sentry/angular @sentry/tracing
 You should `init` the Sentry browser SDK as soon as possible during your application load up, before initializing Angular:
 
 ```javascript
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import * as Sentry from '@sentry/angular';
+import { enableProdMode } from "@angular/core";
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import * as Sentry from "@sentry/angular";
 import { Integrations } from "@sentry/tracing";
 
-import { AppModule } from './app/app.module';
+import { AppModule } from "./app/app.module";
 
 Sentry.init({
-  dsn: '___PUBLIC_DSN___',
+  dsn: "___PUBLIC_DSN___",
   integrations: [
     new Integrations.BrowserTracing({
       tracingOrigins: ["localhost", "https://yourserver.io/api"],
@@ -54,9 +54,9 @@ On its own, `@sentry/angular` will report any uncaught exceptions triggered by y
 `@sentry/angular` exports a function to instantiate `ErrorHandler` provider that will automatically send JavaScript errors captured by the Angular's error handler.
 
 ```javascript
-import { APP_INITIALIZER, ErrorHandler, NgModule } from '@angular/core';
+import { APP_INITIALIZER, ErrorHandler, NgModule } from "@angular/core";
 import { Router } from "@angular/router";
-import * as Sentry from '@sentry/angular';
+import * as Sentry from "@sentry/angular";
 
 @NgModule({
   // ...
